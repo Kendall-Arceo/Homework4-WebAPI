@@ -77,7 +77,8 @@ body {
 
 }
 
-.option input:checked.option {
-
+.option input:checked .option {
+    background: #08038C;
+    color: #000;
 
 }
