@@ -6,28 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Coding Quiz</title>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class = startContainer>
-        <div class = title>Try to answer the questions given within the timeframe of 75 seconds. Questions that are correct give an additional 15 seconds to the timer, while an incorrect one decreases by 15 seconds.</div>
-        <button id = "startButton" class = "start-btn">Start</button>
-
-    </div>
-
     <div id ="quizContainer" class="container">
-        <div class ="title">Computer Quiz</div>
-        <div id ="question" class = "question"></div>
-        <label class = "option"><input type ="radio" name ="option" value = "1" /> <span id = "opt1"></span></label>
-        <label class = "option"><input type ="radio" name ="option" value = "2" /> <span id = "opt2"></span></label>
-        <label class = "option"><input type ="radio" name ="option" value = "3" /> <span id = "opt3"></span></label>
-        <label class = "option"><input type ="radio" name ="option" value = "4" /> <span id = "opt4"></span></label>
-        <button id = "nextButton" class = "next-btn" onclick = "loadNextQuestion ();">Next Question</button>
+
+        <div class = row>
+            <div class = col-md-3>
+                <div>Time Remaining: <span id="time">01:15</span> minutes!</div>
+
+            </div>
+        </div>
+
+        <div class = row>
+            <div class = col-md-12>
+                <div class="title">Try to answer the questions given within the timeframe of 75 seconds.</div>
+                <div id="question" class="question"></div>
+                <label class="option"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+                <label class="option"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+                <label class="option"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+                <label class="option"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+                <button id="nextButton" class="next-btn" onclick="loadNextQuestion ();">Next</button>
+
+            </div>
+        </div>
 
     </div>
 
-    <div id ="result" class = "container result" style = "display:none;"></div>
+    <div id ="result" class = "container result" style = "display:flexbox">
+        <form>
+            <div class="form-group" style = "display:flexbox">
+                <label for="exampleInputEmail1">Your Initials:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                
+            </div>
+        </form>
+    
+    </div>
         
         
     

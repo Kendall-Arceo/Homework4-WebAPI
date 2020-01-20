@@ -4,7 +4,7 @@ var questions = [{
     "option2": "Booleans",
     "option3": "Alerts",
     "option4": "Numbers",
-    "answer": "3"
+    "answer": "Numbers"
 
 
 }, {
@@ -13,7 +13,7 @@ var questions = [{
     "option2": "Curly Brackets",
     "option3": "Parenthesis",
     "option4": "Square Brackets",
-    "answer": "2"
+    "answer": "Curly Brackets"
 
 
 },{
@@ -22,7 +22,7 @@ var questions = [{
     "option2": "Other Arrays",
     "option3": "Booleans",
     "option4": "All of the above",
-    "answer": "4"
+    "answer": "All of the above"
 
 
 },{
@@ -31,7 +31,7 @@ var questions = [{
     "option2": "Curly Brackets",
     "option3": "Quotes",
     "option4": "Parenthesis",
-    "answer": "4"
+    "answer": "Parenthesis"
 
 
 },{
@@ -40,7 +40,7 @@ var questions = [{
     "option2": "Terminal/Bash",
     "option3": "For Loops",
     "option4": "Console.log",
-    "answer": "4"
+    "answer": "Console.log"
 
 
 }]

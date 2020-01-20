@@ -6,6 +6,7 @@
 var currentQuestion = 0;
 var score = 0;
 var totQuestions = questions.length;
+var startButton = document.getElementById("startButton")
 
 var startContainer = document.getElementById("startContainer");
 var container = document.getElementById("quizContainer");
@@ -18,9 +19,32 @@ var opt4 = document.getElementById("opt4")
 var nextButton = document.getElementById("nextButton");
 var resultCont = document.getElementById("result");
 
-var x = document.getElementById("quizContainer").nextSibling.innerHTML;
 
+var timeEl = document.querySelector(".time");
+var mainEl = document.getElementById("main");
 
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 + 15,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
 
 function loadQuestion (questionIndex) {
     var q = questions[questionIndex];
@@ -33,6 +57,7 @@ function loadQuestion (questionIndex) {
 };
 
 function loadNextQuestion () {
+
     var selectedOption = document.querySelector("input[type=radio]:checked");
     if (!selectedOption) {
         alert("Select your answer!");
@@ -57,15 +82,9 @@ function loadNextQuestion () {
     if(currentQuestion == totQuestions) {
         container.style.display = "none" ;
         resultCont.style.display = " ";
-        resultCont.textContent = "Your score is" + score;
+        resultCont.textContent = "Your score is:" + score;
         return;
-
-
     }
-
     loadQuestion(currentQuestion);
-
-
 }
-
-loadQuestion(currentQuestion)
+loadQuestion(currentQuestion);
